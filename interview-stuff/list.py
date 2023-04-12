@@ -36,3 +36,7 @@ def reverseList(lst):
     return [lst[-1]]+ reverseList(lst[:-1])
 
 print(reverseList(lst))
+
+lst=[1,2,3,4,5]
+print(lst[len(lst)//2:])
+print(5/2)

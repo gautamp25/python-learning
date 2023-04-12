@@ -48,9 +48,9 @@ def fib2(n):
     else:
         return fib2(n-1) + fib2(n-2)
     
-fib2(-1)
+# fib2(50)
 
-# for i in range(1,501):
-#     print(i, ":", fib2(i))
+for i in range(1,501):
+    print(i, ":", fib2(i))
 
     

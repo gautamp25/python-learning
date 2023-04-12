@@ -16,6 +16,17 @@ s = "NITIN"
 palindrome(s)
 
 # By using indexing/using loop
+s = "rrrrrra"
+# by adding the reverse of the string to it:
+s = s + s[::-1]
+print(s)
+# by adding characters to one end of the string until it becomes a palindrome:
+s = "rrrrrra"
+while s != s[::-1]:
+    s = s[0] + s
+print(s)
+rrrrrrra
+
 def palindrome2(p):
     p_len = len(p)
     for i in range(p_len):
@@ -25,7 +36,10 @@ def palindrome2(p):
     return True
 
 p = "1nitin1"
-print(palindrome2(p))
+q= "rrrrrra"
+q= "arrrrrra"
+
+print(palindrome2(q))
 
 # By using in-build function- reversed & join
 def palindrome3(a):
