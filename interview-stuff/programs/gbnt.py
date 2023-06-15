@@ -1,12 +1,14 @@
 """
-api throtling
-method of REST
-serverless computing?
-lambda function and benefits?
-security groups
-context manager
-abtract class
-can we update class variable in static method?
+What is api throttling?
+method of REST?
+serverless computing and benefits of Lambda?
+What is lambda function
+security groups in AWS
+context manager in python
+abstract class?
+Instance method,staticmethod & class methods in python?
+Can we update class variable in static method?
+
 """
 
 my_string = 'ab@c/def$ij'

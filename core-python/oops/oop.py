@@ -76,7 +76,7 @@
         3. Memory reference automatically passed inside constructor(self variable).
         4. Constructor creates/initialize variables at that memory referece
     
-    How to access clas members?
+    How to access class members?
         class members- Attributes(variables)+ Actions(methods) present inside the class called class members.
 
         We can access these variables using object outside the calss.
@@ -291,7 +291,10 @@ class Bank:
     # static method
     @staticmethod
     def simple_interest(princ_amt,yrs):
+        Bank.bank_name = "ICICI"
         si = (princ_amt*yrs*Bank.rate_of_interest)/100
-        print("Simple interest is:",si)
+        print(f"Simple interest for bank {Bank.bank_name} is:{si}")
 
 Bank.simple_interest(10000,3)
+print(Bank.bank_name) # ICICI- we can change value of class variable in static method
+
