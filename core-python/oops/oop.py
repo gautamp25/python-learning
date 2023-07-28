@@ -24,14 +24,14 @@
             -Every object belong to some/certain class
             -Email class- email1+email2+email3
             -Class is collection of attributes and methods
-            -class is acollection of objects
+            -class is a collection of objects
             -class is a user-defined datatype. eg x=100, print(type(x)), # O/P- <Class 'int'>
             - Built-in class and user-defined class
 
             class Email:
                 #attributes
                 #methods
-            #instanciation/object creation
+            #instantiation/object creation
             obj1= Email([args])
             obj2= Email([args])
 
@@ -41,14 +41,14 @@
                 attachments
             methods-
                 send()
-                save_sa_draft()
+                save_as_draft()
 
         What is Object?
             Object- Object in OOP represents real-world objects.
                 -object is instance of class
                 ex. Email,Man, Student,Employee etc
                 Every object has two properties
-                    1. Attributes(Data) - heading,subject,name.recipient lis
+                    1. Attributes(Data) - heading,subject,name.recipient list
                     2. Behaviours(Action)/Methods - Sending, Adding attachments
                 we can create multiple objects, and object-to-objects values of these will be different.
                     Obj_Email1-
@@ -154,7 +154,7 @@ print(hasattr(obj_child_2,'age'))
 
 
 """
-    Built-in claa attributes-
+    Built-in class attributes-
         1. __dict__: Dictionary containing class's namespace
         2. __doc__: Class documentation string
         3. __name__: Class name

@@ -135,10 +135,9 @@ class LinkedList:
             temp.next = before
             before = temp
             temp = after
-        print(self.head.value)
         
 
-# 1 2 3 4
+# 1-> 2-> 3-> 4
 
 
 
