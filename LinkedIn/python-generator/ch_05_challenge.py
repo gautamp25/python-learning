@@ -11,5 +11,5 @@ string_list = [
 most = max((len(string.split(" ")) for string in string_list))
 print(most)
 
-str_1 = (str for str in (max((len(string.split(" ")) for string in string_list))))
-print(str_1)
+str_1 = iter((max((len(string.split(" ")) for string in string_list))))
+print(next(str_1))

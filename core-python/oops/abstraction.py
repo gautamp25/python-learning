@@ -41,7 +41,7 @@ IMP keep in mind-
 
 
 Uses of Abstraction-
-    1. When we have large code and functionalies.
+    1. When we have large code and functionalities.
     2. Your abstract class is like an API for other subclasses.
     3. Used when a third party is going to provide implementations.
     4. When we have different implementations for different objects for same component.
@@ -72,9 +72,9 @@ class Tata(Car):
     def mileage(self):
         print("Mileage is 32 Kmph")
 
-car_obj = Car()
+# car_obj = Car()
 # print(car_obj) # Can't instantiate abstract class Car with abstract methods 
 ms_obj = MarutiSuzuki()
 ta_obj = Tata()
-print(ms_obj)
-print(ta_obj)
+print(ms_obj.mileage())
+print(ta_obj.mileage())

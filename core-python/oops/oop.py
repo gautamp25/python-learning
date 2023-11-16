@@ -114,7 +114,7 @@ class Animal:
         self.name = 'Dog'
 
 obj1 = Animal()
-obj1
+print(obj1)
 print(obj1.__dict__)
 
 #without constructor: object can't be created
@@ -130,7 +130,7 @@ print(obj_animal.__dict__) # {} empty dict
     Build-in class functions-
         1. getattr(obj_name, attribute_name)
         2. setattr(obj_name, attribute_name, new_value)
-        3. deltattr(obj_name, attribute_name)
+        3. delattr(obj_name, attribute_name)
         4. hasattr(obj_name, attribute_name)
 """
 
@@ -253,9 +253,10 @@ emp_obj2 = Employee('Vijay',40000)
 print(Employee.company_name) # Nitor
 print(emp_obj1.company_name)
 
-Employee.company_name = "NIPL"
 # modify class variable value
+Employee.company_name = "NIPL"
 print(Employee.company_name) # NIPL
+print(emp_obj1.get_company_name())
 
 Employee.get_company_name() # NIPL
 
@@ -295,6 +296,8 @@ class Bank:
         si = (princ_amt*yrs*Bank.rate_of_interest)/100
         print(f"Simple interest for bank {Bank.bank_name} is:{si}")
 
+b1 = Bank()
+b1.simple_interest(200,3)
 Bank.simple_interest(10000,3)
 print(Bank.bank_name) # ICICI- we can change value of class variable in static method
 

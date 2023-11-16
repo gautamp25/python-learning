@@ -33,11 +33,11 @@ class Finance:
 
 
 f1 = Finance()
-print(f1.__dict__)
-f1.display()
+# print(f1.__dict__)
+# f1.display()
 f1._Finance__revenue = 23
 # name mangling _classname__variablename
-print(f1._Finance__revenue)
+# print(f1._Finance__revenue)
 
 class HR:
     def __init__(self):

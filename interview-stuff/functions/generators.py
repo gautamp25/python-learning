@@ -5,9 +5,12 @@ def sqr(n):
         
 a=sqr(3)
 print(a)
-print(next(a))
-print(next(a))
-print(next(a))
-print("=============")
+for j in a:
+    print(j)
+# print(next(a))
+# print(next(a))
+# print(next(a))
+# print(next(a))
+# print("=============")
 
-print(9/2)
+# print(9/2)

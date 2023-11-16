@@ -12,6 +12,7 @@ def square_1(num):
         yield i**2
 
 gen_obj=square_1(10)
+print(gen_obj)
 print(list(gen_obj))
 
 print("*"*20)

@@ -77,7 +77,7 @@ print(s1.__dict__) # {'vehicle': '2 BHLK'}
 
 
 """
-supper() function-
+super() function-
     -using super() function, we can access parent class properties and methods.
     - This function returns temporary object which contains reference to parent class
     - It makes inheritance more manageable & extensible.
@@ -204,6 +204,9 @@ class District(State,Country):
     
 
 d = District()
+# Country constructor called
+# State constructor called
+# District constructor called
 print(d.__dict__)
 
 
@@ -250,8 +253,28 @@ class Y(B,C):
 class P(X,Y):
     pass #(P,X,Y,A,B,C,O)
 
-# print(P.mro()) # P -> X -> A -> Y -> B -> C -> object
+print(P.mro()) # P -> X -> A -> Y -> B -> C -> object
 print(Y.mro())
+
+
+# MRO => D -> C -> A -> B-> O
+class A:
+  def method(self):
+    print("A.method() called")
+
+class B:
+  def method(self):
+    print("B.method() called")
+
+class C(A, B):
+  pass
+
+class D(C, B):
+  pass
+
+d = D()
+d.method()
+print(D.mro())
 
 
 

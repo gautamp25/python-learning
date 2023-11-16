@@ -1,0 +1,51 @@
+What is Docker?
+-It is way to package software so it can run on any hardware.
+3 thing to know how process works
+1. Dockerfile- Dockerfile is blueprint for building a docker image
+2. Image- a template for running docker container
+3. Container- A container is just a running process like any application.
+
+Image file can be used to spawn the same process multiple times in multiple places.
+Tools like kubernetes and swarn come into play to scale containers to an infinite workload.
+
+Commands
+1. docker ps- list of all running containers
+2. docker build -t fireship/demoapp:1.0 - give your image a name
+3. docker run -p 5000:8080 containerid
+4. docker volume create shared-stuff
+5. docker-compose up- run all the containers together
+6. docker-compose down- shut down all the containers
+
+1. Dockerfile- which contains code to build docker image and ultimately run your app as a container.
+FROM node:12
+WORKDIR /app # add source to the image
+COPY package*.json ./ #  it take two args 1. local package json location 2.the place we want to copy it in the container.
+RUN npm install # is just like opening a terminal and running command
+ENV PORT=8080
+EXPOSE 8080
+CMD["npm","start"] # tells the container how to run the actual application.
+
+
+VOLUMES- is just a dedicated folder on the host machine and inside this folder a conatiner can create that can be remounted
+into future containers or multiple containers at the same time
+
+
+DEBUGGING-
+
+docker-compose-tool for running multiple docker containers at the same time
+docker-compose.yml file
+
+version: '3'
+services:
+    web: # to define our app
+        build: . # to point it to the current working directory where it can find docker file
+        ports:
+    db: #separate container
+        image:"mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+        volumes:
+            - db-data:/foo
+
+volumes:
+    db-data:

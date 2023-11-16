@@ -7,7 +7,7 @@
 def fibo(n):
     a,b = 0,1
     print(a)
-    while(b<n):
+    while(b<=n):
         print(b)
         a,b = b, a+b
 
@@ -32,7 +32,7 @@ def fibo1(n):
             print(c)
             
 
-fibo1(7)
+fibo1(3)
 
 # Using recursion
 print("Using recursion")
@@ -40,7 +40,7 @@ def fibo3(n):
     if n<=1:
         return n
     else:       
-        return fibo3(n-1) + fibo3(n-2) 
+        return fibo3(n-1) + fibo3(n-2) # (2-1)+(2-2)->1=2+1=3+2
 n = 7
 if n<=0:
     print("Not Valid number")
@@ -58,6 +58,18 @@ def fibo4(i):
         return fibo4(i-2)+fibo4(i-1)
 
 print(fibo4(7))
+
+for i in range(5):
+    print(i)
+cnt = 1
+def fun1(a,b):
+    global cnt
+    if cnt<=5:
+        cnt+=1
+        return fun1(a+b,1)
+
+res = fun1(1,2)
+print(res)
 
 
     

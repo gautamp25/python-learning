@@ -18,11 +18,12 @@ print(sys.getsizeof((contains_i(some_word))))
 -Interacting with Generator object
     1. convert type- can be converted into diff. types like List
     2. Loop- like other iterator can be also loop through 
-    3. next()- to get greate control over accessing elements inside oy generator object
+    3. next()- to get greate control over accessing elements inside of generator object
     4. Generator objects are exhausted after the use.
 
     The yield statement produces a generator object and can return multiple values to the caller without terminating the program,
-     whereas a return statement is used to return a value to the caller from within a function and it terminates the program. The return statement is used to return the value to the caller from within a function.
+     whereas a return statement is used to return a value to the caller from within a function and it terminates the program.
+       The return statement is used to return the value to the caller from within a function.
 """
 def gen_contains_i(words):
     for word in words:
@@ -47,8 +48,8 @@ for el in gen_contains_i(some_word):
 
 # next()
 print("***Next****")
-print(next(gen_obj))
-print(next(gen_obj))
-print(next(gen_obj))
-print(next(gen_obj))
+# print(next(gen_obj))
+# print(next(gen_obj))
+# print(next(gen_obj))
+# print(next(gen_obj))
 
