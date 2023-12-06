@@ -64,6 +64,7 @@ class Father:
         self.vehicle = "House"
 
 class Son(Father):
+    # pass
     def __init__(self):
         print("Son class constructor called")
         self.vehicle = "2 BHLK"
@@ -72,13 +73,13 @@ s1= Son()
 # if no constructor in child class
 # print(s1.__dict__) # {'vehicle': 'House'}
 
-# If constructor present in child then no parent constuctor called
+# If constructor present in child then no parent constuctor called. Constructor over-riding: 
 print(s1.__dict__) # {'vehicle': '2 BHLK'}
 
 
 """
 super() function-
-    -using super() function, we can access parent class properties and methods.
+    - using super() function, we can access parent class properties and methods.
     - This function returns temporary object which contains reference to parent class
     - It makes inheritance more manageable & extensible.
 """

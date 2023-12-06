@@ -20,7 +20,7 @@ l4= [1,2,3,4,5,6]
 print(l4[:])
 print(l4[-7:])
 print(l4[0:6])
-print(l4[:])
+print(l4[-2:-7])
 
 num = [2,3,4,5]
 print(sum(num,100))
@@ -33,6 +33,7 @@ print(x)
 # Concatenation and Replication
 print([1,2,3]+['a','b','c','d'])
 print(['X', 'Y', 'Z'] * 3)
+print([1,2]+[3,4])
 
 my_list = [1, 2, 3]
 my_list += ['A', 'B', 'C']
@@ -51,7 +52,7 @@ for item, amount in zip(furniture,price):
     print(f"The {item} costs-${amount}")
 
 # The Multiple Assignment Trick
-furniture = ['table', 'chair', 'rack', 'shelf']
+furniture = ['table1', 'chair1', 'rack', 'shelf']
 table,chair,rack,shelf = furniture
 print(table,chair)
 

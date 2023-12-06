@@ -4,7 +4,7 @@ In Python, an abstract class is a class that cannot be instantiated directly
     -Abstract classes are useful when you want to create a blueprint for a group of classes
      that share certain characteristics or behavior.
 
-    To create an abstract class in Python, you need to use the abc module,
+    To create an abstract class in Python, you nZ"eed to use the abc module,
     which stands for Abstract Base Classes.
     This module provides the ABC class and the abstractmethod decorator, which you can use to define abstract methods.
 

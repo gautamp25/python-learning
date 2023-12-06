@@ -14,6 +14,6 @@ class Addition:
 a1 = Addition()
 a2 = Addition()
 
-a1.add(1,2) # TypeError: add() missing 1 required positional argument: 'c'
+# a1.add(1,2) # TypeError: add() missing 1 required positional argument: 'c'
 # In python last method is called by default & python not support purely method overloading
 a2.add(1,2,3)

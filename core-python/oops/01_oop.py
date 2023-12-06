@@ -9,7 +9,7 @@
             # Re-usability is achieved but can not solve real world problem with this
         3. Object-oriented paradigm- With oop we can solve real world problems
 
-        - OOP is an approach of writing programs by creating classes ans objects.
+        - OOP is an approach of writing programs by creating classes and objects.
         - More focus on data rather than logic
         Why OOP?
             To solve real-world problems effectively.
@@ -45,7 +45,9 @@
 
         What is Object?
             Object- Object in OOP represents real-world objects.
-                -object is instance of class
+                - An object is the basic building block of OOPs. 
+                - An object can be considered a real-life entity having a state and behaviour.
+                - object is instance of class
                 ex. Email,Man, Student,Employee etc
                 Every object has two properties
                     1. Attributes(Data) - heading,subject,name.recipient list
@@ -59,6 +61,17 @@
                         heading- Need help
                         to-abc@gmail.com
                         attachments-pic.jpg
+
+        Characteristics of Object:
+            1. State: The current values of each attribute continue to make up an object's state.
+                It can be of two types: Static and Dynamic.
+            
+            2. Behaviour: Behaviour describes how an object behaves and responds regarding state transitions.
+            
+            3. Identity: An object's identity is a quality that makes it distinct from all other objects.
+            
+            4. Responsibility: It is the function of an object that it performs within the system.
+
     What is Constructor?
         - Special method used for initializing objects with attributes
         - It is __init__() method
@@ -79,7 +92,7 @@
     How to access class members?
         class members- Attributes(variables)+ Actions(methods) present inside the class called class members.
 
-        We can access these variables using object outside the calss.
+        We can access these variables using object outside the class.
         Syntax-
             Accessing attribute- obj_name.variable_name
             Accessing method- obj_name.method_name()
@@ -186,6 +199,7 @@ print(Employee.__module__) #__main__
     Instance variables & Instance methods
         Types of Variables
             1. Instance variables
+                - Variables whose values are assigned inside the init method(constructor) or method with self are called instance variables.
                 - Variables made for particular instance
                 - Separate copy is created for every object
                 - Values of variables differs from object-to-object.
@@ -262,26 +276,7 @@ Employee.get_company_name() # NIPL
 
 
 # Example of setter and getter methods
-class Employee:
-    # setter method
-    def setName(self,name):
-        self.name = name
-
-    # getter method
-    def getName(self):
-        print("The Name is:",self.name)
-
-
-e1 = Employee()
-e2 = Employee()
-
-e1.setName("Gautam")
-e2.setName("Snehal")
-print(e1.__dict__)
-print(e2.__dict__)
-
-e1.getName()
-e2.getName()
+e()
 
 
 # Example of static method

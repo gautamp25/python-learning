@@ -5,7 +5,7 @@ from types import ClassMethodDescriptorType
 
 """python support multiple inheritance. MRO is concept used in inheritance.
  It is order in which method is searched for in classes  hierarchy.
- In python MRO is from bottom to top and left to right. Means first method is serached in class of the object,
+ In python MRO is from bottom to top and left to right. Means first method is searched in class of the object,
  if it's not found then searched in immediate super class. In case of multiple super classes it is searched left to right
 
 """

@@ -138,7 +138,7 @@ Built-in Datatype
             A map represents a group of elements in the form of key value pairs.
             Ex:
                 data = {101: 'Rahul', 102: 'Raj', 103: 'Sonam' }
-                data = {'rahul':2000, ‘raj':3000, ‘sonam':8000, }
+                data = {'rahul':2000, 'raj':3000, 'sonam':8000, }
                 [101] Rahul ['rahul'] 2000
                 [102] Raj ['raj'] 3000
                 [103] Sonam ['sonam'] 8000

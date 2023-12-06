@@ -1,0 +1,9 @@
+
+Everything in Python is an Object 💯
+In Python, almost everything is an object, whether a number, a function, or a module. 
+Python is using a pure object model where classes are instances of a meta-class “type” in Python, 
+the terms “type” and “class” are synonyms. And “type” is the only class that is an instance of itself.
+
+
+What is an object? 🤔
+In object-oriented progarmming like Python,an object is an entity that contains data along with associated metadata or functionality.

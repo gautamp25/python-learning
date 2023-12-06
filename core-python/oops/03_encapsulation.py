@@ -6,7 +6,7 @@
         as Encapsulation.
         e.g class with Method & Variables.
 
-        Data hiding
+        #Data hiding
 
     Access Modifiers in python:
         - Generally, we restrict data access outside the class in encapsulation.
@@ -33,17 +33,17 @@ class Finance:
 
 
 f1 = Finance()
-# print(f1.__dict__)
-# f1.display()
+print(f1.__dict__)
+f1.display()
 f1._Finance__revenue = 23
 # name mangling _classname__variablename
-# print(f1._Finance__revenue)
+print(f1._Finance__revenue)
 
 class HR:
     def __init__(self):
         self.number_of_emp = 32
         f1.__revenue = 0
-        # print(f1.__revenue)
+        print(f1.__revenue)
 
 h1 = HR()
 print(f1.__dict__)
