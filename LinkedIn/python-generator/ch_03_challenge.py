@@ -9,7 +9,7 @@ print(square(10))
 # with generator function
 def square_1(num):
     for i in range(1,num):
-        yield i**2
+        yield i**2 
 
 gen_obj=square_1(10)
 print(gen_obj)

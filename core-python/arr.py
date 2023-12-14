@@ -8,3 +8,5 @@ import array
 st_id = array.array('i',[101,102,103,104])
 # print(i)
 print(st_id[0])
+
+print(2*2**3)
