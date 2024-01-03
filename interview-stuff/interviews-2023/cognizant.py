@@ -72,3 +72,17 @@ print(slice_result)  # Output: [1, 3, 5]
 
 Slicing is a powerful feature in Python that allows you to manipulate sequences efficiently by working with subsets of data without modifying the original sequence.
 """
+t1=[1,2,3,1]
+t1_str = str(t1)
+print(t1_str)
+
+print(t1_str.count(','))
+
+d = [{'b': 10, 'a': 5, 'c': 90}, {'b': 78, 'a': 45}, {'a': 90, 'c': 10}]
+
+merged_dict = {}
+for sub_dict in d:
+    # print(sub_dict)
+    merged_dict.update(sub_dict)
+
+print(merged_dict)

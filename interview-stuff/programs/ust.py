@@ -54,11 +54,14 @@ However, the interesting part is that the lambda functions hold a reference to t
 print([m(2) for m in multipliers()])
 
 
-In this line, a list comprehension is used to iterate over the list of lambda functions returned by the multipliers function. Each lambda function is then called with the argument 2. The expected output would be [6, 6, 6, 6].
+In this line, a list comprehension is used to iterate over the list of lambda functions returned by the multipliers function. Each lambda function is then called with the argument 2.
+The expected output would be [6, 6, 6, 6].
 
-The unexpected result occurs because the lambda functions all refer to the same variable i. By the time the lambda functions are executed, the loop in range(4) has already completed, and the value of i is set to its final value, which is 3. Therefore, when each lambda function is called, it multiplies 3 by 2, resulting in 6.
+The unexpected result occurs because the lambda functions all refer to the same variable i. By the time the lambda functions are executed, the loop in range(4) has already completed, and the value of i is set to
+its final value, which is 3. Therefore, when each lambda function is called, it multiplies 3 by 2, resulting in 6.
 
-To achieve the desired behavior of multiplying each lambda function by a different value of i, you can use a technique called "capturing the value of i" by passing it as a default argument to the lambda function. Here's an updated version of the code that demonstrates this:
+To achieve the desired behavior of multiplying each lambda function by a different value of i, you can use a technique called "capturing the value of i" by passing it as a default argument to the lambda function.
+ Here's an updated version of the code that demonstrates this:
 
 python
 

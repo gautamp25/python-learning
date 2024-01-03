@@ -82,7 +82,8 @@ They are commonly used for tasks like filtering, mapping, and transforming data 
     numbers = [1, 2, 3, 4, 5]
     squared_numbers = list(map(lambda x: x**2, numbers))
 
-    In this example, the lambda function is used to calculate the square of each number in the numbers list. The map() function then applies this lambda function to each element of the list, returning a new list with the squared numbers.
+    In this example, the lambda function is used to calculate the square of each number in the numbers list. The map() function then applies this lambda function to each 
+    element of the list, returning a new list with the squared numbers.
     
     Use:
         Lambda functions are also useful in situations where you need to pass a simple function as an argument to another function, such as in sorting or filtering operations.
@@ -160,9 +161,8 @@ They are commonly used for tasks like filtering, mapping, and transforming data 
     In Python, the map() function and lambda function are both used for performing operations on a collection of data.
 
     The map() function takes in a function and an iterable as arguments.
-    It applies the function to each element in the iterable and returns an iterator with the results. For example, if you have a list of numbers and want to square each number, you can use the map() function along with a lambda function like this:
-
-    ini
+    It applies the function to each element in the iterable and returns an iterator with the results. For example, if you have a list of numbers and want to square each number, you can use the map() function 
+    along with a lambda function like this:
 
     numbers = [1, 2, 3, 4, 5]
     squared_numbers = map(lambda x: x**2, numbers)
@@ -170,7 +170,8 @@ They are commonly used for tasks like filtering, mapping, and transforming data 
 
     The result will be an iterator with the squared numbers: [1, 4, 9, 16, 25].
 
-    On the other hand, a lambda function is an anonymous function that can be defined in a single line. It is often used when you need a simple function for a short period of time, without the need to define a named function. The lambda function takes in arguments and returns a value based on the expression defined.
+    On the other hand, a lambda function is an anonymous function that can be defined in a single line. It is often used when you need a simple function for a short period of time, without the need to define
+    a named function. The lambda function takes in arguments and returns a value based on the expression defined.
 
     Using the previous example, you can rewrite the map() function using a lambda function like this:
 
@@ -179,7 +180,7 @@ They are commonly used for tasks like filtering, mapping, and transforming data 
     squared_numbers = map(lambda x: x**2, numbers)
 """
 
-# Explain filter() function.
+# Explain reduce() function.
 """
     The reduce function in Python is a function from the functools module that is used to apply a specific function to the elements of an "iterable in a cumulative way". 
     It takes two arguments: the function to be applied and the iterable. The function is applied to the first two elements of the iterable, then to the result and the next element,
@@ -252,7 +253,8 @@ They are commonly used for tasks like filtering, mapping, and transforming data 
     The __iter__() method returns the iterator object itself, while the __next__() method returns the next value from the iterator.
     When there are no more items to return, the __next__() method should raise the StopIteration 
 
-    In Python, an iterator is an object that can be iterated or looped over. It allows you to access the elements of a container (like a list or a tuple) one by one. To create an iterator in Python, you need to implement the __iter__() and __next__() methods in a class.
+    In Python, an iterator is an object that can be iterated or looped over. It allows you to access the elements of a container (like a list or a tuple) one by one. 
+    To create an iterator in Python, you need to implement the __iter__() and __next__() methods in a class.
 
     Here's an example of an iterator class in Python:
 
@@ -321,7 +323,59 @@ They are commonly used for tasks like filtering, mapping, and transforming data 
     and decremented when a reference is deleted or goes out of scope. When an object's reference count reaches zero, it is considered garbage and can be safely deallocated from memory.
 
     Python also uses a garbage collector that periodically runs to detect and deallocate objects with circular references.
-    Circular references occur when two or more objects reference each other, forming a cycle that prevents them from being garbage collected. The garbage collector identifies these cycles and frees up the memory occupied by the objects.
+    Circular references occur when two or more objects reference each other, forming a cycle that prevents them from being garbage collected.
+    The garbage collector identifies these cycles and frees up the memory occupied by the objects.
 
-    Overall, Python's memory management system allows developers to focus on writing code without having to explicitly allocate and deallocate memory. However, it's still important to be mindful of memory usage and avoid unnecessary object creation to ensure optimal performance.
+    Overall, Python's memory management system allows developers to focus on writing code without having to explicitly allocate and deallocate memory.
+    However, it's still important to be mindful of memory usage and avoid unnecessary object creation to ensure optimal performance.
+"""
+
+# Namespace in python.
+"""
+    In Python, a namespace is a container that holds a set of names (identifiers) and their corresponding objects (values).
+    It serves as a mapping between names and objects, allowing you to organize and manage the "names" used in your Python program.
+    Namespaces play a crucial role in avoiding naming conflicts and providing a way to organize code.
+
+    There are several types of namespaces in Python:
+    1.Local Namespace:
+        The local namespace is associated with a particular function or method. 
+        It contains the names defined within that function or method.
+        This namespace is created when the function is called and destroyed when the function exits.
+
+        Example:
+        def my_function():
+            local_variable = 42
+            print(local_variable)
+
+        my_function()
+
+
+    2. Global Namespace:
+
+        The global namespace encompasses the entire module.
+        It includes names defined at the top level of a script or module.
+        This namespace is created when the module is imported or executed and persists until the program terminates.
+
+        Example:
+        global_variable = 10
+
+        def print_global_variable():
+            print(global_variable)
+
+        print_global_variable()
+
+
+    3. Built-in-namespace:
+        The built-in namespace contains names that are part of the Python language itself.
+        These names are always available and include functions like print(), data types like int and list, and other built-in functionalities.
+
+        print(len([1, 2, 3]))  # 'len' is a built-in function
+
+    Namespaces are organized hierarchically in Python, forming a chain of scopes. When you reference a name, Python searches for it in the local namespace first,
+    then in the enclosing (if any) functions' namespaces, followed by the global namespace, and finally in the built-in namespace.
+
+    Understanding namespaces is crucial for avoiding naming conflicts, managing variable scope, and gaining insights into how Python resolves names during execution.
+    It is also fundamental for concepts like variable scope, closures, and decorators.
+
+
 """
