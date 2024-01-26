@@ -35,6 +35,7 @@ Node: Value and Pointer both together make up node.It is essentially dictionary.
             }
         }
     }
+    Nestead dictionaries
 """
 
 head = {
@@ -54,5 +55,5 @@ head = {
         }
     }
 print(head["next"]["next"]["value"])
-# Only run with a Linked List
+# This will Only run with a Linked List
 # print(my_linked_list.head.next.next.value)

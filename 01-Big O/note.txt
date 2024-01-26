@@ -1,0 +1,14 @@
+
+Big O- is way of comparing two sets of code mathematically about how efficient they run in.
+Time complexity- is not measured in time, it is measured in the number of operations that it take to complete something.
+
+Space complexity-it is related to memory space.
+
+Best case- Omega
+Average case- Theta
+Wost case- Omicron
+
+O(n^2)= Loop within a Loop
+O(n)= Proportional
+O(log n) = Divide and Conquer
+O(1) = Constant

@@ -84,9 +84,10 @@ furniture = ['table', 'chair', 'rack', 'shelf']
 furniture.remove('chair')
 print(furniture)
 
-"""pop()
-By default, pop will remove and return the last item of the list. 
-You can also pass the index of the element as an optional parameter:
+"""
+pop()
+    By default, pop will remove and return the last item of the list. 
+    You can also pass the index of the element as an optional parameter:
 """
 animals = ['cat', 'bat', 'rat', 'elephant']
 nums = [2, 5, 3.14, 1, -7]

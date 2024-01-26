@@ -151,4 +151,47 @@ my_dict = {
 new_dict = {key:val for key,val in my_dict.items() if isinstance(val, list) and all(isinstance(x, int) for x in val) and sum(val)>14}
 print(new_dict)
 
+# Literas in Python
+"""
+1. Numeric Literals
+2. String Literals
+3. Boolean Literals
+4. None Literal
+5. Container Literals
+Literals in python are fixed values that represent constant data in Python code. They are utilized to relegate values to variables, define constants, and perform different operations within the code. 💻
+Python has a few types of literals, including numeric literals, string literals, boolean literals, None literal, and container literals. 📦
+Numeric literals incorporate integer, floating-point, and complex literals, which are utilized in numerical operations, comparisons, and other numeric computations. 🔢
+String literals in python represent strings of characters in Python and are encased in single quotes, double quotes, or triple quotes. 🔤
+Boolean literals represent the truth values Genuine and Wrong in Python. ✔️❌
+The None literal represents a null value in Python. 🅾️
+Container literals represent data structures that can contain other literals, counting list literals, tuple literals, and dictionary literals. 📦
+"""
+
+# GENERAL:
+def test(x):
+    return x
+    
+test.name = "Gautam"
+print(test.name)
+print(test.__code__.co_name)
+print(test.__code__.co_argcount)
+print(test.__code__.co_varnames)
+print(test.__code__.co_firstlineno)
+
+class Dog:
+    def __init__(self,name,age):
+        self.name = "name"
+        self.age = age
+        
+    def __call__(self):
+        return f'apple {self.name}'
+        
+obj = Dog("Tommy",5)
+print(obj())
+
+def add(x:int,y:int)->int:
+    return x+y
+
+print(add('5','3'))
+
 

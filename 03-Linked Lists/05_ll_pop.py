@@ -1,3 +1,10 @@
+"""
+    take two variables temp & pre
+    if temp.next is not None:
+        temp = temp.next
+        pre = temp
+"""
+
 class Node:
     """
         We have common create new Node in below class's every method so,
@@ -5,8 +12,7 @@ class Node:
     """
     def __init__(self, value):
         self.value = value
-        self.next = None    
-
+        self.next = None
 
 class LinkedList:
     def __init__(self,value):
@@ -38,6 +44,33 @@ class LinkedList:
         return True
     
     def pop(self):
+        """
+        The pop method remove the last node (tail) from the linked list and return the removed node.
+            1.If the list is empty, the method should return None. 
+            2.After the last node is removed, the second-to-last node should become the new tail of the list.
+            3.if the list becomes empty after the pop operation, both the head and tail attributes should be set to None.
+            - Pseudo Code:
+                METHOD pop:
+                    IF length attribute is 0:
+                        RETURN None
+
+                    SET temp to head attribute
+                    SET pre to head attribute
+
+                    WHILE next attribute of temp is NOT None:
+                        SET pre to temp
+                        SET temp to next attribute of temp
+
+                    SET tail attribute to pre
+                    SET next attribute of tail to None
+                    DECREMENT length attribute by 1
+
+                    IF length attribute is 0:
+                        SET head attribute to None
+                        SET tail attribute to None
+
+                    RETURN temp
+        """
         # Pop return the last element from LL
         if self.length == 0:
             return None
@@ -55,54 +88,13 @@ class LinkedList:
             self.head = None
             self.tail = None
         return temp.value
-    
-    def prepend(self,value):
-        new_node = Node(value)
 
-        if self.length == 0:
-            self.head = new_node
-            self.tail = new_node
-        else:
-            new_node.next = self.head
-            self.head = new_node
-        self.length += 1
-        return True
-    
-    def pop_first(self):
-        if self.length == 0:
-            return None
-        temp = self.head
-        self.head = self.head.next
-        temp.next = None
-        self.length -=1
-        if self.length == 0:
-            self.head = None
-            self.tail = None
-        return temp.value
-    
-    def get(self,index):
-        if index < 0 or index >=self.length:
-            return None
-        temp = self.head
-        for _ in range(index):
-            temp = temp.next
-        return temp.value
-
-
-
-my_linked_list = LinkedList(0)
-
-my_linked_list.append(1)
+my_linked_list = LinkedList(1)
 
 my_linked_list.append(2)
 
-my_linked_list.append(3)
+print(my_linked_list.pop()) # return Node 2
 
+print(my_linked_list.pop()) # return Node 1
 
-# print(my_linked_list.print_list())
-
-print(my_linked_list.get(4))
-
-
-
-
+print(my_linked_list.pop()) # return None

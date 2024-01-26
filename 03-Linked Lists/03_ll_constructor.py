@@ -29,4 +29,5 @@ class LinkedList:
 
 my_linked_list = LinkedList(4)
 print(my_linked_list.head.value)
+# print(my_linked_list.tail.value)
         

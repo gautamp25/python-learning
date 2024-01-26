@@ -38,16 +38,18 @@ class LinkedList:
     
     def append(self,value):
         """
+        REMEMBER-Last and tail points to new node..
             Pseudo Code:
                 METHOD append (value):
                     CREATE new_node with Node class and value
 
-                    IF head attribute is NULL:
+                    IF head attribute is None or length is 0:
                         SET head attribute to new_node
-                        SET tail attribute to new_node
+                        #SET tail attribute to new_node
                     ELSE:
                         SET next attribute of tail to new_node
-                        SET tail attribute to new_node
+                        #SET tail attribute to new_node
+                    SET tail attribute to new_node (This shifted to outside coz it is common)
                     INCREMENT length attribute by 1
         """
         # create new Node

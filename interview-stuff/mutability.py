@@ -12,7 +12,7 @@ t[2]=5
 print("After modification:",t) # TypeError: 'tuple' object does not support item assignment
 
 s = "abcd"
-# s[0] = 'x'
+s[0] = 'x'
 print(id(s))
 print(s) # TypeError: 'str' object does not support item assignment
 s= 'xyz'

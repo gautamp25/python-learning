@@ -135,7 +135,7 @@ my_linked_list.append(23)
 
 my_linked_list.append(7)
 
-print(my_linked_list.remove(1), '\n')
+print(my_linked_list.remove(1),'\n')
 
 print(my_linked_list.print_list())
 

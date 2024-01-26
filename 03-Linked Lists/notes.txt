@@ -1,0 +1,14 @@
+Linked List & List Difference:
+    1. Linked list does not have indexes
+    2. List is contiguous place in memory. 
+        3. These are all right next to each other in memory with a LL.
+
+    - All of the nodes are going to be spread all over the place.
+
+    Linked List e.g 11 3 23 7
+    Head-Variable head points to the first node in the list here head->11
+
+    Tail-variable tail points to the last node in the list, here tail->7
+
+    each nod points to the next to the next and last points to the None
+    11->3->23->7
