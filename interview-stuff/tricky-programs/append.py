@@ -9,6 +9,7 @@ print(s_lst)
 
 my_string = "Python is Beutiful"
 # o/p = "Beutiful is Python"
+print(my_string.split(" ")[::-1])
 print(" ".join(my_string.split(" ")[::-1]))
 
 

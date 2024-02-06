@@ -179,6 +179,28 @@ How can you handle file uploads in Flask?
 
     File uploads are handled using the request.files object. The FileStorage object in Flask provides access to uploaded files, and you can use it to save or process the files.
 
+    from flask import Flask, render_template, request
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+
+    @app.route('/upload', methods=['POST'])
+    def upload_file():
+        if 'file' not in request.files:
+            return 'No file part'
+
+        file = request.files['file']
+
+        if file.filename == '':
+            return 'No selected file'
+
+        file.save('uploads/' + file.filename)
+        return 'File successfully uploaded'
+
+
 Explain Flask SQLAlchemy and its role in Flask applications.
 
     Flask SQLAlchemy is an extension for Flask that adds support for SQLAlchemy, a popular Object-Relational Mapping (ORM) library. It simplifies database interactions in Flask applications.
@@ -303,3 +325,128 @@ print(splitStr("&o1234gsot"))
 O(n)+ o(m)
 O(n+m) 
 
+
+"""
+Postman supports various authentication types to facilitate testing APIs. Here are some common authentication types available in Postman:
+
+    No Auth:
+        Requests are sent without any authentication. This is suitable for public APIs that don't require authentication.
+
+    Basic Auth:
+        Username and password are sent as part of the request headers. This is a simple form of authentication but is not secure for production use without proper encryption (HTTPS).
+
+    Digest Auth:
+        Similar to Basic Auth but more secure. It uses a challenge-response mechanism to authenticate the user.
+
+    Bearer Token:
+        Requires a token (usually obtained through a separate authentication process) to be included in the request headers. Commonly used for OAuth 2.0 authentication.
+
+    API Key:
+        Requires an API key to be included in the request headers. This is a common method for authenticating requests to APIs.
+
+    OAuth 1.0:
+        Implements the OAuth 1.0 authentication flow, which involves obtaining temporary credentials, obtaining user authorization, and finally exchanging temporary credentials for access tokens.
+
+    OAuth 2.0:
+        Implements the OAuth 2.0 authentication flow. It involves obtaining access tokens, which are then used to authenticate requests.
+
+    Hawk Authentication:
+        Hawk is a HTTP authentication scheme providing a simple way for clients to authenticate to servers.
+
+    AWS Signature:
+        For requests to Amazon Web Services (AWS) APIs, you can use AWS Signature authentication.
+
+    NTLM Authentication:
+        NT LAN Manager (NTLM) authentication is a secure challenge-response authentication protocol.
+
+    Custom Authentication:
+        Postman allows you to define custom authentication mechanisms using pre-request scripts.
+
+How to Set Authentication in Postman:
+
+    Open Postman.
+    Select a request or create a new one.
+    Go to the "Authorization" tab in the request window.
+    Choose the desired authentication type from the drop-down menu.
+    Fill in the required credentials or parameters based on the selected authentication type.
+
+Remember that the appropriate authentication method depends on the API you are testing and its security requirements. Always use secure authentication methods, such as Bearer Token or OAuth, when dealing with sensitive information or production environments."""
+
+
+
+"""
+
+Multithreading in Python refers to the concurrent execution of multiple threads to improve the overall performance of a program. A thread is the smallest unit of execution within a process. Here are key points about multithreading in Python:
+
+    Threading Module:
+        Python provides the threading module to work with threads. It offers a higher-level threading API compared to the lower-level thread module.
+
+    Thread Creation:
+
+        Threads are created by instantiating the Thread class from the threading module.
+
+        python
+
+    import threading
+
+    def my_function():
+        # Code to be executed in the thread
+
+    my_thread = threading.Thread(target=my_function)
+
+Starting Threads:
+
+    After creating a thread object, you need to start it using the start() method.
+
+    python
+
+    my_thread.start()
+
+Thread Execution:
+
+    The code inside the target function of the thread is executed concurrently with the main program.
+
+Joining Threads:
+
+    The join() method is used to wait for a thread to complete its execution before moving on with the main program.
+
+    python
+
+    my_thread.join()
+
+Thread Safety:
+
+    When working with threads, be cautious about shared resources to avoid race conditions and ensure thread safety. Locks and semaphores can be used for synchronization.
+
+    python
+
+    lock = threading.Lock()
+
+    def my_function():
+        with lock:
+            # Code to be executed safely
+
+Global Interpreter Lock (GIL):
+
+    Python has a Global Interpreter Lock (GIL) that allows only one thread to execute in the interpreter at a time. This can impact the performance of CPU-bound multithreaded programs. For CPU-bound tasks, consider using multiprocessing.
+
+Use Cases:
+
+    Multithreading is beneficial for I/O-bound tasks where threads can wait for I/O operations (e.g., network requests, file operations) without blocking the entire program.
+
+ThreadPoolExecutor:
+
+    Python's concurrent.futures module provides a ThreadPoolExecutor for managing a pool of threads.
+
+    python
+
+        from concurrent.futures import ThreadPoolExecutor
+
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            results = executor.map(my_function, iterable_of_arguments)
+
+    Considerations:
+        Multithreading might not provide significant performance improvement for CPU-bound tasks due to the GIL. For CPU-bound tasks, consider using multiprocessing.
+
+Remember, multithreading in Python is suitable for certain scenarios, especially for I/O-bound tasks. If you are dealing with CPU-bound tasks, multiprocessing or other parallel processing techniques might be more appropriate.
+"""

@@ -63,7 +63,7 @@ while start < end:
 my_string = ''.join(my_list)
 
 # Print the reversed string
-print(my_string)  # Output: ij@c/fed$ba
+print(my_string)  # Output: ji@c/fed$ba
 # ----------------------------------------
 import re
 

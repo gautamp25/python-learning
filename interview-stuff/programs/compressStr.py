@@ -35,9 +35,12 @@ def cmp_str1(s):
     new_str = ""
     while(i<n-1):
         count = 1
+        print(i)
         while(i<n-1 and s[i]==s[i+1]):
+            print("in",i)
             count += 1
             i += 1
+        print("=",i)
         i+=1
         new_str = new_str + s[i-1]+str(count)
     return new_str
